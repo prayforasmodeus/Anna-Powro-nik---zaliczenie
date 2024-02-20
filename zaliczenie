@@ -1,0 +1,99 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Random random = new Random();
+        string[] hello =  
+        {
+            "Witaj w quizie!",
+            "Przedstawiam Wam wspaniały quiz!",
+            "Przed Tobą bardzo trudny, dwuetapowy quiz.",
+		};
+		int index = random.Next(hello.Length);
+		Console.WriteLine(hello[index]);
+		
+Console.WriteLine("Jaki kolor ma trawa?");
+string answer = Console.ReadLine();
+if (answer == "zielony")
+
+{
+	Console.WriteLine("Jaki kolor ma niebo?");
+	string answer2 = Console.ReadLine();
+	if (answer2 == "niebieski")
+	
+	{
+		Console.WriteLine("Jaki kolor ma truskawka?");
+		string answer3 = Console.ReadLine();
+		if (answer3 == "czerwony")
+		
+{
+Console.WriteLine("Ile to 3+3? (6/12/5)");
+string answer4 = Console.ReadLine();
+switch(answer4)
+{  
+	case "5":
+    case "12":
+    Console.WriteLine("ŹLE!");
+    break;
+    case "6":
+    Console.WriteLine("Super!");
+    break;
+}
+		Console.WriteLine("Część pierwsza zaliczona.");
+{
+Console.WriteLine("A teraz zadam Ci graczu inne pytania i podliczę Twoje punkty.");
+	  string[] questions =
+        {
+            "Jaki owoc jest podłużny, zółty i lekko wykrzywiony?",
+            "Jaka jest stolica Polski?",
+            "Kto napisał sagę o wiedźminie?",
+            "W jaki dzień obchodzimy Walentynki?",
+            "Koty czy psy :)?"
+        };
+        string[] answers =
+        {
+            "banan",
+            "Warszawa",
+            "Andrzej Sapkowski",
+            "14 lutego",
+            "koty"
+        };
+
+        int score = 0;
+
+        for (int i = 0; i < questions.Length; i++)
+        {
+            Console.WriteLine(questions[i]);
+            string userAnswer = Console.ReadLine();
+
+            if (userAnswer.ToLower() == answers[i].ToLower())
+            {
+                Console.WriteLine("Poprawna odpowiedź!");
+                score++;
+            }
+            else
+            {
+                Console.WriteLine($"Źle! Dobra odpowiedź to: {answers[i]}");
+            }
+
+            Console.WriteLine($"Twój wynik to: {score} / {questions.Length}");
+        }
+
+        if (score == questions.Length)
+        {
+            Console.WriteLine("Gratulacje, osiągnąłeś perfekcyjny wynik!");
+        }
+	Console.WriteLine("Dziękuję za udział w quizie :)");
+
+}
+			}
+		}
+		
+	}
+
+	}
+
+}
+
